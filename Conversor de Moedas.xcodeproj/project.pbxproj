@@ -14,6 +14,15 @@
 		E970274125375A5800BFDE14 /* Conversor_de_Moedas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E970273F25375A5800BFDE14 /* Conversor_de_Moedas.xcdatamodeld */; };
 		E970274325375A5900BFDE14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E970274225375A5900BFDE14 /* Assets.xcassets */; };
 		E970274625375A5900BFDE14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E970274425375A5900BFDE14 /* LaunchScreen.storyboard */; };
+		E970275325379BE500BFDE14 /* Moedas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970275225379BE500BFDE14 /* Moedas.swift */; };
+		E970275725379BFF00BFDE14 /* Valores.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970275625379BFF00BFDE14 /* Valores.swift */; };
+		E970275B25379E7A00BFDE14 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970275A25379E7A00BFDE14 /* Error.swift */; };
+		E970275E25379FA200BFDE14 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970275D25379FA200BFDE14 /* Endpoint.swift */; };
+		E97027612537A20200BFDE14 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97027602537A20200BFDE14 /* Networking.swift */; };
+		E97027642537A29E00BFDE14 /* CambioDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97027632537A29E00BFDE14 /* CambioDados.swift */; };
+		E97027672538E8A600BFDE14 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97027662538E8A600BFDE14 /* CoreData.swift */; };
+		E9E033D22539ED2400489B44 /* ListaMoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E033D12539ED2400489B44 /* ListaMoedasViewController.swift */; };
+		E9E033D52539EE7C00489B44 /* ListaMoedasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E033D42539EE7C00489B44 /* ListaMoedasTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		E970274225375A5900BFDE14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E970274525375A5900BFDE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E970274725375A5900BFDE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E970275225379BE500BFDE14 /* Moedas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moedas.swift; sourceTree = "<group>"; };
+		E970275625379BFF00BFDE14 /* Valores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valores.swift; sourceTree = "<group>"; };
+		E970275A25379E7A00BFDE14 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		E970275D25379FA200BFDE14 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E97027602537A20200BFDE14 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		E97027632537A29E00BFDE14 /* CambioDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambioDados.swift; sourceTree = "<group>"; };
+		E97027662538E8A600BFDE14 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		E9E033D12539ED2400489B44 /* ListaMoedasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMoedasViewController.swift; sourceTree = "<group>"; };
+		E9E033D42539EE7C00489B44 /* ListaMoedasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMoedasTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +76,49 @@
 		E970273525375A5800BFDE14 /* Conversor de Moedas */ = {
 			isa = PBXGroup;
 			children = (
+				E97027502537768900BFDE14 /* Controller */,
+				E970274F2537768200BFDE14 /* View */,
+				E970274E2537767B00BFDE14 /* Model */,
 				E970273625375A5800BFDE14 /* AppDelegate.swift */,
 				E970273825375A5800BFDE14 /* SceneDelegate.swift */,
-				E970273A25375A5800BFDE14 /* ViewController.swift */,
-				E970273C25375A5800BFDE14 /* Main.storyboard */,
 				E970274225375A5900BFDE14 /* Assets.xcassets */,
-				E970274425375A5900BFDE14 /* LaunchScreen.storyboard */,
 				E970274725375A5900BFDE14 /* Info.plist */,
 				E970273F25375A5800BFDE14 /* Conversor_de_Moedas.xcdatamodeld */,
 			);
 			path = "Conversor de Moedas";
+			sourceTree = "<group>";
+		};
+		E970274E2537767B00BFDE14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E970275225379BE500BFDE14 /* Moedas.swift */,
+				E970275625379BFF00BFDE14 /* Valores.swift */,
+				E970275A25379E7A00BFDE14 /* Error.swift */,
+				E970275D25379FA200BFDE14 /* Endpoint.swift */,
+				E97027602537A20200BFDE14 /* Networking.swift */,
+				E97027632537A29E00BFDE14 /* CambioDados.swift */,
+				E97027662538E8A600BFDE14 /* CoreData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E970274F2537768200BFDE14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E970273C25375A5800BFDE14 /* Main.storyboard */,
+				E970274425375A5900BFDE14 /* LaunchScreen.storyboard */,
+				E9E033D42539EE7C00489B44 /* ListaMoedasTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E97027502537768900BFDE14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E970273A25375A5800BFDE14 /* ViewController.swift */,
+				E9E033D12539ED2400489B44 /* ListaMoedasViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +191,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97027642537A29E00BFDE14 /* CambioDados.swift in Sources */,
+				E970275725379BFF00BFDE14 /* Valores.swift in Sources */,
 				E970273B25375A5800BFDE14 /* ViewController.swift in Sources */,
+				E970275E25379FA200BFDE14 /* Endpoint.swift in Sources */,
+				E97027672538E8A600BFDE14 /* CoreData.swift in Sources */,
+				E97027612537A20200BFDE14 /* Networking.swift in Sources */,
 				E970273725375A5800BFDE14 /* AppDelegate.swift in Sources */,
 				E970274125375A5800BFDE14 /* Conversor_de_Moedas.xcdatamodeld in Sources */,
+				E970275325379BE500BFDE14 /* Moedas.swift in Sources */,
+				E970275B25379E7A00BFDE14 /* Error.swift in Sources */,
+				E9E033D52539EE7C00489B44 /* ListaMoedasTableViewCell.swift in Sources */,
 				E970273925375A5800BFDE14 /* SceneDelegate.swift in Sources */,
+				E9E033D22539ED2400489B44 /* ListaMoedasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
