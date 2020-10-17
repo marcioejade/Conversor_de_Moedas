@@ -23,4 +23,11 @@ extension CurrencyLayer: Endpoint {
             case .conversao: return "http://api.currencylayer.com/live?access_key=e577f514be3b254d7ec08cb2cd789a12"
         }
     }
+    
+    var mock: String {
+        switch self {
+            case .listaMoedas: return "List"
+            case .conversao: return "Live"
+        }
+    }
 }

@@ -50,3 +50,22 @@ struct HTTPNetworking: Networking {
     }
 }
 
+struct MockNetworking: Networking {
+    func request(from: CurrencyLayer, parameters: [String: String]?, completion: @escaping CompletionHandler) {
+        let data = readJson(name: from.mock)
+        completion(data, nil)
+    }
+    func readJson(name: String) -> Data? {
+        var data: Data?
+        if let path = Bundle.main.path(forResource: name, ofType: "json") {
+            do {
+                data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            } catch let error {
+                // handle error
+                print(error.localizedDescription)
+                return nil
+            }
+        }
+        return data
+    }
+}

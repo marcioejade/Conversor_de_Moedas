@@ -28,7 +28,7 @@ class CambioDados {
         }
     }
     
-    func getListaMoedas(completion: @escaping (Moedas?) -> ()) {
+    private func getListaMoedas(completion: @escaping (Moedas?) -> ()) {
         networking.request(from: CurrencyLayer.listaMoedas, parameters: nil) { data, error in
             guard let dataResponse = data, error == nil else {
                 print(error?.localizedDescription ?? "Response Error")
@@ -51,7 +51,7 @@ class CambioDados {
         }
     }
     
-    func getValores(completion: @escaping (Valores?) -> ()) {
+    private func getValores(completion: @escaping (Valores?) -> ()) {
         networking.request(from: CurrencyLayer.conversao, parameters: nil) { data, error in
             guard let dataResponse = data, error == nil else {
                 print(error?.localizedDescription ?? "Response Error")
@@ -74,7 +74,7 @@ class CambioDados {
         }
     }
     
-    func setListaMoedasCoreData(listaMoedas: Moedas) {
+    private func setListaMoedasCoreData(listaMoedas: Moedas) {
         deleteAllData("ListaDeMoedas")
         guard let currencies = listaMoedas.currencies else { return }
         
@@ -95,7 +95,7 @@ class CambioDados {
         }
     }
     
-    func setListaValoresCoreData(listaValores: Valores) {
+    private func setListaValoresCoreData(listaValores: Valores) {
         deleteAllData("ListaDeValores")
         guard let quotes = listaValores.quotes else { return }
 
@@ -116,7 +116,7 @@ class CambioDados {
         }
     }
     
-    func getListaMoedasCoreData() -> Moedas? {
+    private func getListaMoedasCoreData() -> Moedas? {
         let coreData = CoreData()
         let context = coreData.persistentContainer.viewContext
 
@@ -150,7 +150,7 @@ class CambioDados {
         return nil
     }
     
-    func getListaValoresCoreData() -> Valores? {
+    private func getListaValoresCoreData() -> Valores? {
         let coreData = CoreData()
         let context = coreData.persistentContainer.viewContext
 
@@ -185,7 +185,7 @@ class CambioDados {
     }
     
     
-    func deleteAllData(_ entity:String) {
+    private func deleteAllData(_ entity:String) {
         let coreData = CoreData()
         let context = coreData.persistentContainer.viewContext
         
